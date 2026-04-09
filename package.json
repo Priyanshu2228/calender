@@ -1,0 +1,10 @@
+{
+  "name": "wall-calendar-range",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "start": "node ./scripts/start.mjs",
+    "dev": "node ./scripts/start.mjs"
+  }
+}

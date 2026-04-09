@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A premium wall-hanging monthly calendar with refined cross-month date range selection and daily notes."
+    />
+    <title>Wall Calendar Range</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient--left" aria-hidden="true"></div>
+    <div class="ambient ambient--right" aria-hidden="true"></div>
+
+    <main class="calendar-studio">
+      <section class="wall-calendar" aria-label="Premium monthly calendar">
+        <div class="calendar-hanger" aria-hidden="true">
+          <span class="calendar-hanger__pin"></span>
+          <span class="calendar-hanger__pin"></span>
+          <span class="calendar-hanger__pin"></span>
+        </div>
+
+        <header class="calendar-cover">
+          <div class="cover-art" aria-hidden="true">
+            <div class="cover-art__glow"></div>
+            <div class="cover-art__sun"></div>
+            <div class="cover-art__cloud cover-art__cloud--one"></div>
+            <div class="cover-art__cloud cover-art__cloud--two"></div>
+            <div class="cover-art__hill cover-art__hill--back"></div>
+            <div class="cover-art__hill cover-art__hill--front"></div>
+            <div class="cover-art__branch cover-art__branch--one"></div>
+            <div class="cover-art__branch cover-art__branch--two"></div>
+            <div class="cover-art__grain"></div>
+          </div>
+
+          <div class="cover-copy">
+            <p class="cover-copy__eyebrow">Collector's Edition</p>
+            <h1 class="cover-copy__title" id="heroMonthLabel">Month Year</h1>
+            <p class="cover-copy__subtitle" id="heroDateLabel">Selected date</p>
+            <p class="cover-copy__description">
+              A tactile monthly planner with refined paper textures, smooth month
+              switching, elegant date-range selection across months and years,
+              and notes that stay saved in your browser.
+            </p>
+            <div class="cover-copy__chips">
+              <span class="stat-chip" id="todayChip">Today</span>
+              <span class="stat-chip" id="rangeChip">Range: not started</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="calendar-sheet">
+          <div class="calendar-toolbar">
+            <button class="control-button" id="prevMonthButton" type="button">
+              Previous
+            </button>
+
+            <div class="calendar-toolbar__titleblock">
+              <p class="calendar-toolbar__eyebrow">Monthly View</p>
+              <h2 id="monthHeading">Month Year</h2>
+            </div>
+
+            <div class="calendar-toolbar__actions">
+              <button
+                class="control-button control-button--accent"
+                id="todayButton"
+                type="button"
+              >
+                Today
+              </button>
+              <button class="control-button" id="nextMonthButton" type="button">
+                Next
+              </button>
+            </div>
+          </div>
+
+          <div class="weekday-row" aria-hidden="true">
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+          </div>
+
+          <div class="calendar-grid" id="calendarGrid" role="grid" aria-labelledby="monthHeading"></div>
+        </section>
+      </section>
+
+      <aside class="selection-sheet" id="selectionPanel" aria-live="polite"></aside>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
